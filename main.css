@@ -1,1 +1,171 @@
-body{font:90% "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;margin:0;padding:0;text-align:center;color:#000;background:url(../../vizitka/bg.png) repeat-x fixed}.langmenu{background:url(../../vizitka/langmenu.png) no-repeat 0 bottom;width:94px;height:35px;position:fixed;top:0;right:10px;z-index:1}.langmenu:hover{padding-top:6px}.langmenu a{display:inline-block;width:22px;height:11px;background-position:top;background-repeat:no-repeat;margin-bottom:3px}.langmenu a.active,.langmenu a:hover{height:19px;background-position:bottom;margin-bottom:0}.langmenu a.cz{background-image:url(../../vizitka/cza.png)}.langmenu a.en{background-image:url(../../vizitka/gba.png)}.langmenu span{display:none}#container{width:394px;margin:0 auto;text-align:left}#mainContent{padding:10px 20px;background:url(../../vizitka/main-bg.png) repeat-y;margin:0;position:relative;color:gray}#content{padding:0 8px}.header{background:url(../../vizitka/header.png) no-repeat -5px;color:#e3e3e3;height:36px;padding-top:26px;padding-left:40px;margin:30px 0 0;font-size:16px}.navigation{margin-left:-21px;margin-right:-10px;background:url(../../vizitka/navigation.png) no-repeat;padding:14px 18px 18px;margin-top:73px}.navigation a{margin-right:30px;margin-left:30px;display:inline-block;color:white;text-decoration:none;padding:4px;-moz-border-radius:10px;-webkit-border-radius:10px}.info .navigation #nav-info,.portfolio .navigation #nav-portfolio,.contact .navigation #nav-contact{background-color:gray;border:1px solid gray;margin-top:-2px;margin-right:22px}.navigation a:hover{border:1px solid silver !important;background-color:silver !important;margin-top:-2px;margin-right:22px}.footer{padding:20px;background:url(../../vizitka/footer.png) no-repeat;text-align:center;color:#939393;font:italic}.left{position:absolute;right:11px;top:-9px}.resume{position:absolute;width:222px;top:-7px}.frame{width:337px;margin-left:5px}.frame .top{background:url(../../vizitka/divtop.png) no-repeat;height:16px;margin-bottom:0}.frame .main{background:url(../../vizitka/divmain.png) repeat-y;padding:0 8px 0 14px}.frame .bottom{background:url(../../vizitka/divbottom.png) no-repeat;height:16px;margin-top:0}a{color:gray}a img{border:none}a:hover{text-decoration:none}#slidecontainer{width:337px;height:300px;overflow:hidden;padding:0}.shifter{position:relative;margin:0;width:1020px;height:280px}.pane{position:relative;margin:0;width:307px;height:280px;float:left;overflow:auto;padding:0 15px}.pane p{margin-top:6px;margin-bottom:6px}.quicknav{display:none;text-align:center;position:absolute;bottom:0;width:300px}
+body {
+font: 90% "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+margin: 0;
+padding: 0;
+text-align: center;
+color: #000;
+background: url(bg.png) repeat-x fixed
+}
+.langmenu {
+background: url(langmenu.png) no-repeat 0 bottom;
+width: 94px;
+height: 35px;
+position: fixed;
+top: 0;
+right: 10px;
+z-index: 1
+}
+.langmenu:hover {
+padding-top: 6px
+}
+.langmenu a {
+display: inline-block;
+width: 22px;
+height: 11px;
+background-position: top;
+background-repeat: no-repeat;
+margin-bottom: 3px
+}
+.langmenu a.active,.langmenu a:hover {
+height: 19px;
+background-position: bottom;
+margin-bottom: 0
+}
+.langmenu a.cz {
+background-image: url(cza.png)
+}
+.langmenu a.en {
+background-image: url(gba.png)
+}
+.langmenu span {
+display: none
+}
+#container {
+width: 394px;
+margin: 0 auto;
+text-align: left
+}
+#mainContent {
+padding: 10px 20px;
+background: url(main-bg.png) repeat-y;
+margin: 0;
+position: relative;
+color: gray
+}
+#content {
+padding: 0 8px
+}
+.header {
+background: url(header.png) no-repeat -5px;
+color: #e3e3e3;
+height: 36px;
+padding-top: 26px;
+padding-left: 40px;
+margin: 30px 0 0;
+font-size: 16px
+}
+.navigation {
+margin-left: -21px;
+margin-right: -10px;
+background: url(navigation.png) no-repeat;
+padding: 14px 18px 18px;
+margin-top: 73px
+}
+.navigation a {
+margin-right: 30px;
+margin-left: 30px;
+display: inline-block;
+color: white;
+text-decoration: none;
+padding: 4px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px
+}
+.info .navigation #nav-info,.portfolio .navigation #nav-portfolio,.contact .navigation #nav-contact {
+background-color: gray;
+border: 1px solid gray;
+margin-top: -2px;
+margin-right: 22px
+}
+.navigation a:hover {
+border: 1px solid silver !important;
+background-color: silver !important;
+margin-top: -2px;
+margin-right: 22px
+}
+.footer {
+padding: 20px;
+background: url(footer.png) no-repeat;
+text-align: center;
+color: #939393;
+font: italic
+}
+.left {
+position: absolute;
+right: 11px;
+top: -9px
+}
+.resume {
+position: absolute;
+width: 222px;
+top: -7px
+}
+.frame {
+width: 337px;
+margin-left: 5px
+}
+.frame .top {
+background: url(divtop.png) no-repeat;
+height: 16px;
+margin-bottom: 0
+}
+.frame .main {
+background: url(divmain.png) repeat-y;
+padding: 0 8px 0 14px
+}
+.frame .bottom {
+background: url(divbottom.png) no-repeat;
+height: 16px;
+margin-top: 0
+}
+a {
+color: gray
+}
+a img {
+border: none
+}
+a:hover {
+text-decoration: none
+}
+#slidecontainer {
+width: 337px;
+height: 300px;
+overflow: hidden;
+padding: 0
+}
+.shifter {
+position: relative;
+margin: 0;
+width: 1020px;
+height: 280px
+}
+.pane {
+position: relative;
+margin: 0;
+width: 307px;
+height: 280px;
+float: left;
+overflow: auto;
+padding: 0 15px
+}
+.pane p {
+margin-top: 6px;
+margin-bottom: 6px
+}
+.quicknav {
+display: none;
+text-align: center;
+position: absolute;
+bottom: 0;
+width: 300px
+}
