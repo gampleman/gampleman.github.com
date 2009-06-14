@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>
+			Jakub Hampl
+		</title>
+		<style type="text/css" media="screen">
+			/* the overlayed element */ 
+			div.overlay { 
+
+			    /* growing background image 
+			    background-image:url(../img/overlay/white.png); 
+			     */ 
+			    /* dimensions after the growing animation finishes  */ 
+			    width:980px; 
+			    height:626px;         
+
+			    /* initially overlay is hidden */ 
+			    display:none; 
+
+			    /* some padding to layout nested elements nicely   **/
+			    padding:55px; 
+			} 
+
+			/* default close button positioned on upper right corner */ 
+			div.overlay div.close { 
+			    background-image:url(http://static.flowplayer.org/img/overlay/close.png); 
+			    position:absolute; 
+			    right:5px; 
+			    top:5px; 
+			    cursor:pointer; 
+			    height:35px; 
+			    width:35px; 
+			}
+
+			#photo_2 { 
+			    background-image:url(http://static.flowplayer.org/img/overlay/apple.png); 
+			    color:#fff; 
+			}
+			
+		</style>
+		<script src="http://cdn.jquerytools.org/1.0.2/jquery.tools.min.js"></script>
+	
+	<script src="master.js" type="text/javascript">
+
+	</head>
+	<body>
+		<div class="langmenu">
+			<a href="/cz.html" class="cz"><span>Czech</span></a> <a href="/index.html" class="en active"><span>English</span></a>
+		</div>
+		<div id="container">
+			<h1 class="header">
+				Jakub Hampl
+			</h1>
+			<div id="mainContent">
+				<a id="my-photo" href="#photo_2" name="my-photo" rel="#photo_2"><img class="left" src="img/photo_2_tn.jpg" /></a>
+				<p class="resume">
+					Web Design, RIA programming, UX design &amp; doing cool stuff
+				</p>
+				<div class="navigation">
+					<a id="nav-info" href="#info" name="nav-info">Info</a> <a id="nav-portfolio" href="#portfolio" name="nav-portfolio">Portfolio</a> <a id="nav-contact" href="#contact" name="nav-contact">Contact</a>
+				</div>
+				<div id="content">
+					<h2>
+						Info
+					</h2>
+					<div id="info" class="node">
+						<h3>
+							About me
+						</h3>
+						<div class="frame">
+							<div class="top"></div>
+							<div class="main">
+								<p style="margin-top:0">
+									I am a young developer based in Edinburgh, Scotland originating from Prague. I am interested in creating interesting websites and building <abbr title="Rich Internet Applications">RIAs</abbr>.
+								</p>
+								<p style="margin-bottom:0">
+									I am also a student of Artificial Intelligence and Psychology at Edinburgh University.
+								</p>
+							</div>
+							<div class="bottom"></div>
+						</div>
+						<h3>
+							Hire me
+						</h3>
+						<div class="frame">
+							<div class="top"></div>
+							<div class="main">
+								<p style="margin-top:0">
+									I am looking for a part time job either as in-house or freelance developer/designer. Since I am a student I am looking for approximately ten hours per week.
+								</p>
+								<p style="margin-bottom:0">
+									If you would like a beautiful custom built website, don't hesitate to contact me.
+								</p>
+							</div>
+							<div class="bottom"></div>
+						</div>
+					</div>
+					<h2>
+						Portfolio
+					</h2>
+					<div id="portfolio" class="node">
+						<h3>
+							Websites I've done
+						</h3>
+						<div class="frame">
+							<div class="top"></div>
+							<div id="slidecontainer" class="main">
+								<div id="shifter">
+									<div class="paner">
+										<p>
+											<img src="img/Home.png" />
+										</p>
+										<p>
+											A project of the European Social Fund for educating school directors.
+										</p>
+										<p>
+											<b>My Role:</b> Development and coding.
+										</p>
+										<p>
+											<a href="http://managementsol.cz">Visit</a>
+										</p>
+										<div class="quicknav">
+											<a href="#" class="shiftleft">Next &gt;</a>
+										</div>
+									</div>
+									<div class="paner">
+										<p>
+											<img src="img/Sestraved.png" />
+										</p>
+										<p>
+											An EU project for training health workers in management skills.
+										</p>
+										<p>
+											<b>My Role:</b> Development and coding.
+										</p>
+										<p>
+											<a href="http://developer.xf.cz/archive/sestravede/">Visit (in archive)</a>
+										</p>
+										<div class="quicknav">
+											<a href="#" class="shiftright">&lt; Prev</a> | <a href="#" class="shiftleft">Next &gt;</a>
+										</div>
+									</div>
+									<div class="paner">
+										<p>
+											More to come. To view my complete portfolio, please visit my <a href="http://developer.xf.cz/portfolio">blog</a>.
+										</p>
+										<div class="quicknav">
+											<a href="#" class="shiftright">&lt; Prev</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="bottom"></div>
+						</div>
+					</div>
+					<h2>
+						Contact
+					</h2>
+					<div id="contact" class="node">
+						<h3>
+							Contact
+						</h3>
+						<div class="frame">
+							<div class="top"></div>
+							<div class="main">
+								<div class="vcard">
+									<a class="url fn" href="http://developer.xf.cz">Jakub Hampl</a>
+									<div>
+										Phone: <span class="tel">07961722904</span>
+									</div>
+									<div>
+										Email: <a class="email" href="mailto:hontiom(at)seznam(point)cz">hontiom(at)seznam(point)cz</a>
+									</div>
+									<div>
+										Skype: <a class="url" href="skype:kopomir?chat">Skype: kopomir</a>
+									</div>
+									<div>
+										ICQ: <a class="url" type="application/x-icq" href="http://www.icq.com/people/cmd.php?uin=260959836&amp;action=message">260959836</a>
+									</div>
+								</div>
+							</div>
+							<div class="bottom"></div>
+						</div>
+					</div>
+					<h2>
+						My photo
+					</h2>
+					<div class="overlay" id="photo_2">
+						<img src="img/photo_2.jpg" alt="My photo" />
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				© Jakub Hampl 2009
+			</div>
+		</div>
+	</body>
+</html>
