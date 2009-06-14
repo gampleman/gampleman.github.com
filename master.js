@@ -23,31 +23,42 @@ $(document).ready(function() {
     $("#nav-info").click(showInfo);
     $("#nav-portfolio").click(showPortfolio);
     $("#nav-contact").click(showContact);
-    $('#my-photo').fancyZoom({
-        scaleImg:
-        true,
-        closeOnClick: true,
-        directory: 'images'
-    });
-    $('#shifter').addClass('shifter');
-    $('.paner').addClass('pane').removeClass('paner');
-    $('.quicknav').show();
-    $('a.shiftleft').click(function() {
-        setWidth = setWidth - getWidth;
-        $('#shifter').animate({
-            left: setWidth
-        },
-        500);
-        return false;
-    });
-    $('a.shiftright').click(function() {
-        setWidth = setWidth + getWidth;
-        $('#shifter').animate({
-            left: setWidth
-        },
-        500);
-        return false;
-    });
+    $('#my-photo').overlay();
+	$("#my-photo").tooltip({ 
+	    /* tooltip configuration goes here */ 
+
+	    // one configuration property 
+	    position: ['center', 'right'], 
+
+	    // another property 
+	    opacity: 0.7, 
+
+	    // ... the rest of the configuration properties 
+	});
+    // $('#shifter').addClass('shifter');
+    //     $('.paner').addClass('pane').removeClass('paner');
+    //     $('.quicknav').show();
+    //     $('a.shiftleft').click(function() {
+    //         setWidth = setWidth - getWidth;
+    //         $('#shifter').animate({
+    //             left: setWidth
+    //         },
+    //         500);
+    //         return false;
+    //     });
+    //     $('a.shiftright').click(function() {
+    //         setWidth = setWidth + getWidth;
+    //         $('#shifter').animate({
+    //             left: setWidth
+    //         },
+    //         500);
+    //         return false;
+    //     });
+
+	$("div.scrollable").scrollable({
+		size: 1,
+		clickable: false
+	});
 });
 function initialShowPortfolio() {
     $("#content").hide();
