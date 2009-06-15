@@ -35,29 +35,11 @@ $(document).ready(function() {
 
 	    // ... the rest of the configuration properties 
 	});
-    // $('#shifter').addClass('shifter');
-    //     $('.paner').addClass('pane').removeClass('paner');
-    //     $('.quicknav').show();
-    //     $('a.shiftleft').click(function() {
-    //         setWidth = setWidth - getWidth;
-    //         $('#shifter').animate({
-    //             left: setWidth
-    //         },
-    //         500);
-    //         return false;
-    //     });
-    //     $('a.shiftright').click(function() {
-    //         setWidth = setWidth + getWidth;
-    //         $('#shifter').animate({
-    //             left: setWidth
-    //         },
-    //         500);
-    //         return false;
-    //     });
-
+    
 	$("div.scrollable").scrollable({
 		size: 1,
-		clickable: false
+		clickable: false,
+		
 	});
 });
 function initialShowPortfolio() {

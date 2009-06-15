@@ -254,11 +254,11 @@ div.scrollable {
 	/* required settings */
 	position:relative;
 	overflow:hidden;	 	
-	width: 337px;	
+	width: 327px;	
 	height:300px;	
 	
 	
-	background: url(img/divmain.png) repeat-y;
+	margin-left: -10px;
 }
 
 /* 
@@ -283,9 +283,10 @@ div.scrollable div.items div {
 	
 	/* custom decoration */
 	text-align:center;
-	width:307px;
+	width:297px;
 	padding:25px 0px;
 	margin-right: 20px;	
+	
 	-moz-border-radius:5px;
 }
 
@@ -308,7 +309,7 @@ div.navi {
 	margin:auto;
 	height:20px;
 	padding-top: 10px;
-	
+	display: inline;
 }
 
 
@@ -337,12 +338,12 @@ div.navi a.active {
 
 /* prev, next, prevPage and nextPage buttons */
 a.prev, a.next, a.prevPage, a.nextPage {
-	display:block;
+	/*display:block;*/
 	width:18px;
 	height:18px;
 	background:url(img/left.png) no-repeat;
 	float:left;
-	margin:43px 10px;
+	/*margin:43px 10px;*/
 	cursor:pointer;
 	font-size:1px;
 }
@@ -361,4 +362,7 @@ a.disabled {
 a.next, a.nextPage {
 	background-image:url(img/right.png);
 	clear:right;	
+}
+a.prev {
+	margin-left: 100px;
 }
