@@ -1,5 +1,7 @@
+/* @override http://localhost/~kubowo/vizitka/main.css */
+
 body {
-font: 90% "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+font: 90% Geneva, "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
 margin: 0;
 padding: 0;
 text-align: center;
@@ -67,9 +69,16 @@ background: url(img/header.png) no-repeat -5px;
 color: #e3e3e3;
 height: 36px;
 padding-top: 26px;
-padding-left: 40px;
+padding-left: 20px;
 margin: 30px 0 0;
-font-size: 16px
+font-size: 16px;
+	letter-spacing: 1px;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: lowercase;
+}
+.header::before {
+	content: ".:";
 }
 .navigation {
 margin-left: -21px;
@@ -83,22 +92,16 @@ margin-right: 30px;
 margin-left: 30px;
 display: inline-block;
 color: white;
-text-decoration: none;
 padding: 4px;
--moz-border-radius: 10px;
--webkit-border-radius: 10px
+	text-decoration: none;
+	letter-spacing: 0.06em;
 }
 .info .navigation #nav-info,.portfolio .navigation #nav-portfolio,.contact .navigation #nav-contact {
-background-color: gray;
-border: 1px solid gray;
-margin-top: -2px;
-margin-right: 22px
+color: silver;
 }
 .navigation a:hover {
-border: 1px solid silver !important;
-background-color: silver !important;
-margin-top: -2px;
-margin-right: 22px
+color: grey;
+
 }
 .footer {
 padding: 20px;
@@ -116,7 +119,8 @@ top: -9px
 .resume {
 	position: absolute;
 	width: 222px;
-	top: -7px
+	top: -7px;
+	
 }
 
 .frame {
@@ -185,38 +189,6 @@ width: 300px
 
 /* New stuf */
 
-/* the overlayed element */ 
-div.overlay { 
-     
-    /* growing background image 
-    background-image:url(../img/overlay/white.png); 
-     */ 
-    /* dimensions after the growing animation finishes  */ 
-    width:980px; 
-    height:62px;         
-     
-    /* initially overlay is hidden */ 
-    display:none; 
-     
-    /* some padding to layout nested elements nicely   */
-    padding:55px; 
-} 
- 
-/* default close button positioned on upper right corner */ 
-div.overlay div.close { 
-    background-image:url(img/close.png); 
-    position:absolute; 
-    right:5px; 
-    top:5px; 
-    cursor:pointer; 
-    height:35px; 
-    width:35px; 
-}
-
-#photo_2 { 
-    background-image:url(img/apple.png); 
-    color:#fff; 
-}
 
 
 div.tooltip { 
@@ -228,6 +200,7 @@ div.tooltip {
     font-size:14px; 
     display:none; 
     color:#fff; 
+    margin-top: 60px;
 } 
  
 /* tooltip title element (h3) */ 
@@ -236,11 +209,6 @@ div.tooltip h3 {
     font-size:18px; 
     color:#fff; 
 }
-
-
-
-
-
 
 
 
@@ -256,8 +224,6 @@ div.scrollable {
 	overflow:hidden;	 	
 	width: 327px;	
 	height:300px;	
-	
-	
 	margin-left: -10px;
 }
 
@@ -284,7 +250,7 @@ div.scrollable div.items div {
 	/* custom decoration */
 	text-align:center;
 	width:297px;
-	padding:25px 0px;
+	
 	margin-right: 20px;	
 	
 	-moz-border-radius:5px;
@@ -365,4 +331,58 @@ a.next, a.nextPage {
 }
 a.prev {
 	margin-left: 100px;
+}
+
+
+
+
+
+/* 
+	root element for the scrollable. 
+	when scrolling occurs this element stays still. 
+*/
+div#twitter_div {
+	
+	/* required settings */
+	position:relative;
+	overflow:hidden;	 	
+	width: 327px;	
+	height:100px;	
+	margin-left: -10px;
+}
+
+/* 
+	root element for scrollable items. Must be absolutely positioned
+	and it should have a super large width to accomodate scrollable items.
+	it's enough that you set width and height for the root element and
+	not for this element.
+*/
+div#twitter_div ul#twitter_update_list   {	
+	/* this cannot be too large */
+	width:20000em;	
+	position:absolute;
+	clear:both;		
+	
+	/* decoration */
+	margin-left:10px;
+}
+
+/* single scrollable item */
+div#twitter_div ul#twitter_update_list li {
+	float:left;
+	
+	/* custom decoration */
+	text-align:center;
+	width:297px;
+	
+	margin-right: 20px;	
+	
+	-moz-border-radius:5px;
+	list-style-type: none;
+}
+
+/* active item */
+div.scrollable div.items div.active {
+	border:1px inset #ccc;		
+	background-color:#fff;
 }

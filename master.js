@@ -23,7 +23,12 @@ $(document).ready(function() {
     $("#nav-info").click(showInfo);
     $("#nav-portfolio").click(showPortfolio);
     $("#nav-contact").click(showContact);
-    $('#my-photo').overlay();
+   	$('#my-photo').fancyZoom({
+        scaleImg:
+        true,
+        closeOnClick: true,
+        directory: 'images'
+    });
 	$("#my-photo").tooltip({ 
 	    /* tooltip configuration goes here */ 
 
@@ -37,6 +42,11 @@ $(document).ready(function() {
 	});
     
 	$("div.scrollable").scrollable({
+		size: 1,
+		clickable: false,
+		
+	});
+	$("div#twitter_div").scrollable({
 		size: 1,
 		clickable: false,
 		
