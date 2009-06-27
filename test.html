@@ -6,45 +6,76 @@
 		<title>
 			Jakub Hampl
 		</title>
-		<style type="text/css" media="screen">
-			/* the overlayed element */ 
-			div.overlay { 
-
-			    /* growing background image 
-			    background-image:url(../img/overlay/white.png); 
-			     */ 
-			    /* dimensions after the growing animation finishes  */ 
-			    width:980px; 
-			    height:626px;         
-
-			    /* initially overlay is hidden */ 
-			    display:none; 
-
-			    /* some padding to layout nested elements nicely   **/
-			    padding:55px; 
-			} 
-
-			/* default close button positioned on upper right corner */ 
-			div.overlay div.close { 
-			    background-image:url(http://static.flowplayer.org/img/overlay/close.png); 
-			    position:absolute; 
-			    right:5px; 
-			    top:5px; 
-			    cursor:pointer; 
-			    height:35px; 
-			    width:35px; 
-			}
-
-			#photo_2 { 
-			    background-image:url(http://static.flowplayer.org/img/overlay/apple.png); 
-			    color:#fff; 
-			}
-			
-		</style>
 		<script src="http://cdn.jquerytools.org/1.0.2/jquery.tools.min.js"></script>
-	
-	<script src="master.js" type="text/javascript">
+		<script type="text/javascript" charset="utf-8">
+		$(function() {
+		  $(".navigation").tabs("#content > div.node", {history: true});
+		 });
+		</script>
+		<style type="text/css" media="screen">
+		  
+          /* root element for tabs  */
+          .navigation {  
+          	margin:0 !important; 
+          	padding:0;
+          	height:30px;
+          	border-bottom:1px solid #666;	 	
+          }
 
+          /* single tab */
+          .navigation li {  
+          	float:left;	 
+          	padding:0; 
+          	margin:0;  
+          	list-style-type:none;	
+          }
+
+          /* link inside the tab. uses a background image */
+          .navigation a { 
+          	float:left;
+          	font-size:13px;
+          	display:block;
+          	padding:5px 30px;	
+          	text-decoration:none;
+          	border:1px solid #666;	
+          	border-bottom:0px;
+          	height:18px;
+          	background-color:#efefef;
+          	color:#777;
+          	margin-right:2px;
+          	-moz-border-radius-topleft: 4px;
+          	-moz-border-radius-topright:4px;
+          	position:relative;
+          	top:1px;	
+          }
+
+          .navigation a:hover {
+          	background-color:#F7F7F7;
+          	color:#333;
+          }
+
+          /* selected tab */
+          .navigation a.current {
+          	background-color:#ddd;
+          	border-bottom:2px solid #ddd;	
+          	color:#000;	
+          	cursor:default;
+          }
+
+
+          /* tab pane */
+          div.node {
+          	display:none;
+          	border:1px solid #666;
+          	border-width:0 1px 1px 1px;
+          	min-height:150px;
+          	padding:15px 20px;
+          	background-color:#ddd;	
+          }
+
+
+
+		</style>
 	</head>
 	<body>
 		<div class="langmenu">
@@ -55,7 +86,10 @@
 				Jakub Hampl
 			</h1>
 			<div id="mainContent">
-				<a id="my-photo" href="#photo_2" name="my-photo" rel="#photo_2"><img class="left" src="img/photo_2_tn.jpg" /></a>
+				<a class="left" id="my-photo" href="#photo_2" name="my-photo" rel="#photo_2"><img  src="img/photo_2_tn.jpg" /></a>
+				<div class="tooltip">
+					<h3>View the source of this website on <a href="http://github.com/gampleman/gampleman.github.com/tree/master">github</a>.</h3>
+				</div>
 				<p class="resume">
 					Web Design, RIA programming, UX design &amp; doing cool stuff
 				</p>
@@ -107,9 +141,18 @@
 						</h3>
 						<div class="frame">
 							<div class="top"></div>
-							<div id="slidecontainer" class="main">
-								<div id="shifter">
-									<div class="paner">
+							
+							
+							
+
+							 
+							<div class="main">
+							<!-- root element for scrollable --> 
+							<div class="scrollable"> 
+
+							    <!-- root element for the items --> 
+							    <div class="items"> 
+							        <div>
 										<p>
 											<img src="img/Home.png" />
 										</p>
@@ -126,7 +169,7 @@
 											<a href="#" class="shiftleft">Next &gt;</a>
 										</div>
 									</div>
-									<div class="paner">
+									<div>
 										<p>
 											<img src="img/Sestraved.png" />
 										</p>
@@ -143,7 +186,7 @@
 											<a href="#" class="shiftright">&lt; Prev</a> | <a href="#" class="shiftleft">Next &gt;</a>
 										</div>
 									</div>
-									<div class="paner">
+									<div>
 										<p>
 											More to come. To view my complete portfolio, please visit my <a href="http://developer.xf.cz/portfolio">blog</a>.
 										</p>
@@ -151,10 +194,24 @@
 											<a href="#" class="shiftright">&lt; Prev</a>
 										</div>
 									</div>
-								</div>
-							</div>
-							<div class="bottom"></div>
+									
+									
+							    </div> 
+								
+							</div> 
+						
+							<!-- prev link --> 
+							<a class="prev"></a>
+							<!-- navigator --> 
+							<div class="navi"></div>
+							<!-- next link --> 
+							<a class="next"></a>
+							<br style="clear:both;">
 						</div>
+							<div class="bottom"></div>
+							
+						</div>
+						
 					</div>
 					<h2>
 						Contact
@@ -184,6 +241,35 @@
 							</div>
 							<div class="bottom"></div>
 						</div>
+						
+						
+						
+						<h3>
+							Twitter 
+						</h3>
+						<div class="frame">
+							<div class="top"></div>
+							<div class="main">
+								<div id="twitter_div">
+								
+								<ul id="twitter_update_list" class="items">
+									
+									<li><span>To see more tweets, view my full <a href="http://twitter.com/kopomir" id="twitter-link">Twitter profile</a>.</span></li>
+								</ul>
+								
+								</div>
+							
+								<div style="display: block; margin-left: 109px;" class="navi"></div>
+								
+								
+							
+							</div>
+							<div class="bottom"></div>
+						</div>
+						
+						
+						
+						
 					</div>
 					<h2>
 						My photo
@@ -197,5 +283,6 @@
 				© Jakub Hampl 2009
 			</div>
 		</div>
+	
 	</body>
 </html>
