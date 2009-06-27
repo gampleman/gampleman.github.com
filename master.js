@@ -4,40 +4,57 @@
 var getWidth = 337;
 var setWidth = 0;
 $(document).ready(function() {
-    $(".navigation").tabs("#content > div.node", {history: true, effect:'slide'});
+	$.tools.addTabEffect("vslide", function(tabIndex) { 
+		if(typeof(tabIndex) != 'undefined') {
+			if(!$("#container").hasClass("t-"+tabIndex)) {
+			   	$("#content").slideUp(500);
+			 	$(".node").fadeOut(500);
+				setTimeout("$('.node').hide();", 500);
+				$("#container").removeClass();
+			} else {
+				$(".node").hide();
+			}
+			$(".navigation a").removeClass();
+			link = $(".navigation a:eq("+tabIndex+")");
+			link.addClass("active");
+			document.title = "Jakub Hampl - "+link[0].text;
+			com = '$(".node:eq('+tabIndex+')").show();';
+			setTimeout(com, 500);
+			$("#content").slideDown(500);
+			$("#container").addClass("t-"+tabIndex);
+		}
+	});
+    $(".navigation").tabs("#content > div.node", {history: true, effect:'vslide'});
     $("h2").hide();
    	$('#my-photo').fancyZoom({
-        scaleImg:
-        true,
+        scaleImg: true,
         closeOnClick: true,
         directory: 'images'
     });
+	$.tools.addTipEffect("slideright",   
+	    function() {  
+	        var opacity = this.getConf().opacity; 
+	        this.getTip().css({opacity:0}).animate({left: '+=30', opacity:opacity}, 300).show(); 
+	    },  
+	    function() { 
+	        this.getTip().animate({left: '-=25', opacity:0}, 300, function() {  
+	                $(this).hide().animate({left: '-=30'}, 0); 
+	        }); 
+	    } 
+	);
 	$("#my-photo").tooltip({ 
-	    /* tooltip configuration goes here */ 
-
-	    // one configuration property 
+		effect: 'slideright',
 	    position: ['center', 'right'], 
-
-	    // another property 
 	    opacity: 0.7, 
-
-	    // ... the rest of the configuration properties 
 	});
-    
-	
-		$("div.scrollable").scrollable({
-			size: 1,
-			clickable: false,
-		});
-	
-	//load the twitter data
-	
-	postLoad('http://twitter.com/statuses/user_timeline/kopomir.json?callback=myTwitCb&amp;count=5');
-	
+	$("div.scrollable").scrollable({
+		size: 1,
+		clickable: false,
+	});
+	$.getScript('http://twitter.com/statuses/user_timeline/kopomir.json?callback=myTwitCb&amp;count=5');
 });
 
 function myTwitCb(twitters) {
-	try {
 		var statusHTML = [];
 		  for (var i=0; i<7; i++){
 		    var username = twitters[i].user.screen_name;
@@ -48,19 +65,12 @@ function myTwitCb(twitters) {
 		    });
 		    statusHTML.push('<li><span>'+status+'</span> <a style="font-size:85%" href="http://twitter.com/'+username+'/statuses/'+twitters[i].id+'">'+relative_time(twitters[i].created_at)+'</a></li>');
 		  }
-		  document.getElementById('twitter_update_list').innerHTML = statusHTML.join('') + document.getElementById('twitter_update_list').innerHTML;
-		
-		$("div#twitter_div").scrollable({
-			size: 1,
-			clickable: false,
-
-		});
-	} catch(e) {
-		$("div#twitter_div").hide();
-	}
-	
+		  $('#twitter_update_list').prepend(statusHTML.join(''));
+	      $("div#twitter_div").scrollable({
+		   	size: 1,
+		   	clickable: false,
+		   });
 }
-
 
 function relative_time(time_value) {
   var values = time_value.split(" ");
@@ -86,15 +96,3 @@ function relative_time(time_value) {
     return (parseInt(delta / 86400)).toString() + ' days ago';
   }
 }
-
-
-
-function postLoad(what) {
-  // var head = document.getElementsByTagName("head")[0];
-   script = document.createElement('script');
-   script.type = 'text/javascript';
-   script.src = what;
-   $('head').append(script);   
-}
-
-
