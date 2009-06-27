@@ -89,12 +89,11 @@ margin-top: 73px
 }
 .navigation a {
 margin-right: 30px;
-margin-left: 30px;
+margin-left: 28px;
 display: inline-block;
 color: white;
 padding: 4px;
 	text-decoration: none;
-	letter-spacing: 0.06em;
 }
 .info .navigation #nav-info,.portfolio .navigation #nav-portfolio,.contact .navigation #nav-contact {
 color: silver;
@@ -195,12 +194,12 @@ div.tooltip {
     background:transparent url(img/black.png) no-repeat scroll 0 0; 
     font-size:14px; 
     height:153px; 
-    padding:30px; 
-    width:310px; 
+    padding:15px; 
+    width:175px; 
     font-size:14px; 
     display:none; 
     color:#fff; 
-    margin-top: 60px;
+    margin-top: 45px;
 } 
  
 /* tooltip title element (h3) */ 

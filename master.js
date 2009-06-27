@@ -1,3 +1,6 @@
+// ===========================================
+// = The master file for my personal website =
+// ===========================================
 var getWidth = 337;
 var setWidth = 0;
 $(document).ready(function() {
@@ -107,12 +110,11 @@ function relative_time(time_value) {
 
 
 function postLoad(what) {
-   var head = document.getElementsByTagName("head")[0];
+  // var head = document.getElementsByTagName("head")[0];
    script = document.createElement('script');
-   //script.id = 'what';
    script.type = 'text/javascript';
    script.src = what;
-   head.appendChild(script);
+   $('head').append(script);   
 }
 
 
