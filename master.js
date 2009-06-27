@@ -1,8 +1,6 @@
 // ===========================================
 // = The master file for my personal website =
 // ===========================================
-var getWidth = 337;
-var setWidth = 0;
 $(document).ready(function() {
 	$.tools.addTabEffect("vslide", function(tabIndex) { 
 		if(typeof(tabIndex) != 'undefined') {
