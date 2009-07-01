@@ -10,12 +10,20 @@
 		<script src="http://cdn.jquerytools.org/1.0.2/jquery.tools.min.js"></script>
 		<script src="js/fancyzoom.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="master.js" type="text/javascript"></script>
+		<!--[if IE]><style type="text/css" media="screen">
+               div#unsopported { display: block !important; }
+           </style><![endif]-->
 	</head>
 	<body>
 		<div class="langmenu">
 			<a href="/cz.html" class="cz active"><span>Czech</span></a> <a href="/index.html" class="en"><span>English</span></a>
 		</div>
 		<div id="container">
+		    <div id="unsupported">
+    		  <p>Prohlížeč, který používáte je zastaralý a není plně podporovaný touto webovou stránkou. Stránky si můžete stále prohlížet, ale nemusí fungovat či vypadat tak, jak byly zamýšleny.</p> 
+    		  <p>Prosím stáhněte si moderní prohlížeč jako <a href="http://getfirefox.com">Firefox</a>, <a href="http://chrome.google.com">Chrome</a> nebo <a href="http://apple.com/downloads">Safari</a>.</p>  
+    		  <p><a href="javascript:$('#unsupported').slideUp().hide()">Zavřít toto varování</a></p>
+    		</div>
 			<h1 class="header">
 				Jakub Hampl
 			</h1>
