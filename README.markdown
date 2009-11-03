@@ -1,7 +1,7 @@
 My Personal site
 ================
 
-Site inspired by work done by Tim Van Dame. Icons from Komodo Media.
+Site inspired by work done by Tim Van Dame. Icons from [Komodo Media](http://www.komodomedia.com).
 
 This site had most of it's widgetry done by hand, but has been re-factored extensively to use the faboulus jQuery Tools library, which was included anyway. This made the source code about six times shorter, and added some features as well, eg. browser back button support.
 
@@ -13,18 +13,4 @@ Programmed in TextMate, designed in DrawIt, styled in CSSEdit and most of the fa
 Testing
 -------
 
-Tested in Safari :) and somewhat in some version of FF.
-
-Changelog
-=========
-
-1.1
----
-
-- Added a Twitter browsing widget to show of my feed.
-- Added browser back button support.
-- Made the site faster to load.
-- Added a sliding tooltip that links to Github. This will be used in the future as a place to download my CV/Resume.
-
-
-
+Tested in Safari :) and somewhat in some version of FF. It shows a nasty message to IE users.

@@ -97,7 +97,7 @@ body {
 }
 
 .navigation a.active {
-	color: silver;
+	color: #222;
 }
 
 .navigation a:hover {
@@ -228,8 +228,9 @@ div.tooltip {
 	display: none;
 	color: #fff;
 	margin-top: 95px;
-	margin-left: -160px;
-	/*z-index: -1;*/
+	left: 200px;
+/*	margin-left: -200px;
+	z-index: -1;*/
 }
 
 /* tooltip title element (h3) */
@@ -317,6 +318,7 @@ div.navi a {
 	background: url(img/navigator.png) 0 0 no-repeat;
 	display: block;
 	font-size: 1px;
+	cursor: pointer;
 }
 
 /* mouseover state */

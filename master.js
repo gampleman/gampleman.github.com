@@ -36,6 +36,7 @@ $(document).ready(function() {
         slideOffset: 40,
         slideInSpeed: 300,
         slideOutSpeed: 300,
+        offset: [0, -210],
         //position: ['center', 'right'],
         opacity: 0.7,
     });
