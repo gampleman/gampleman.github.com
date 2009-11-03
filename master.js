@@ -1,7 +1,7 @@
 // ===========================================
 // = The master file for my personal website =
 // ===========================================
-$(document).ready(function() {
+$(function() {
    // initialy hide all tabs - we don't do this through css - for accessibillity's sake
 	$(".node").fadeOut(0);
 	// A cleaner way to do some of the stuff would be through using callbacks on
@@ -14,7 +14,7 @@ $(document).ready(function() {
                 $("#container").removeClass();
                 $(".navigation a").removeClass();
                 $("#content").slideUp(500);
-                $(".node").fadeOut(500);
+                $(".node").fadeOut(499);
             }
             link = $(".navigation a:eq(" + tabIndex + ")");
             link.addClass("active");
@@ -36,8 +36,8 @@ $(document).ready(function() {
         slideOffset: 40,
         slideInSpeed: 300,
         slideOutSpeed: 300,
-        offset: [0, -210],
-        //position: ['center', 'right'],
+        offset: [90, 130],
+        relative: true,
         opacity: 0.7,
     });
     $("div.scrollable").scrollable({
@@ -74,7 +74,6 @@ function myTwitCb(twitters) {
         clickable: false,
     }).navigator();
 }
-
 function relative_time(time_value) {
     var values = time_value.split(" ");
     time_value = values[1] + " " + values[2] + ", " + values[5] + " " + values[3];
