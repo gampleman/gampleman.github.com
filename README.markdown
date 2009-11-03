@@ -1,7 +1,7 @@
 My Personal site
 ================
 
-Site inspired by work done by Tim Van Dame.
+Site inspired by work done by Tim Van Dame. Icons from Komodo Media.
 
 This site had most of it's widgetry done by hand, but has been re-factored extensively to use the faboulus jQuery Tools library, which was included anyway. This made the source code about six times shorter, and added some features as well, eg. browser back button support.
 

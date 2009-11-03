@@ -2,74 +2,58 @@
 // = The master file for my personal website =
 // ===========================================
 $(document).ready(function() {
-    // A celaner way to do some of the stuff would be through using callbacks on
- 	// on the tabs object, but since I'm implementing the efect anyway I chose to
-	// implement it all in one place.
-	$.tools.addTabEffect("vslide",
+   // initialy hide all tabs - we don't do this through css - for accessibillity's sake
+	$(".node").fadeOut(0);
+	// A cleaner way to do some of the stuff would be through using callbacks on
+    // on the tabs object, but since I'm implementing the efect anyway I chose to
+   	// implement it all in one place.
+	$.tools.tabs.addEffect("vslide",
     function(tabIndex) {
         if (typeof(tabIndex) != 'undefined') {
             if (!$("#container").hasClass("t-" + tabIndex)) {
-                $("#content").slideUp(500);
-                $(".node").fadeOut(500);
-                setTimeout("$('.node').hide();", 500);
                 $("#container").removeClass();
                 $(".navigation a").removeClass();
-            } else {
-                $(".node").hide();
+                $("#content").slideUp(500);
+                $(".node").fadeOut(500);
             }
             link = $(".navigation a:eq(" + tabIndex + ")");
             link.addClass("active");
             document.title = "Jakub Hampl - " + link[0].text;
             com = '$(".node:eq(' + tabIndex + ')").show();';
-            setTimeout(com, 500);
+            setTimeout(com, 501);
             $("#content").slideDown(500);
             $("#container").addClass("t-" + tabIndex);
         }
     });
     $(".navigation").tabs("#content > div.node", {
-        history: true,
         effect: 'vslide'
-    });
+    }).history();
     $("h2").hide();
-    // TODO Replace this with the overlay widget
-    $('#my-photo').fancyZoom({
-        scaleImg: true,
-        closeOnClick: true,
-        directory: 'images'
-    });
-    $.tools.addTipEffect("slideright",
-    function() {
-        // show animation
-        var opacity = this.getConf().opacity;
-        this.getTip().css({ opacity: 0 }).animate({
-            left: '+=30',
-            opacity: opacity
-        }, 300).show();
-    },
-    function() {
-        // hide animation
-        this.getTip().animate({
-            left: '-=25',
-            opacity: 0
-        }, 300,  function() {
-            $(this).hide().animate({
-                left: '-=30'
-            }, 0);
-        });
-    }
-    );
     $("#my-photo").tooltip({
-        effect: 'slideright',
-        position: ['center', 'right'],
+        effect: 'slide',
+        bounce: true,
+        direction: 'right',
+        slideOffset: 40,
+        slideInSpeed: 300,
+        slideOutSpeed: 300,
+        //position: ['center', 'right'],
         opacity: 0.7,
     });
     $("div.scrollable").scrollable({
         size: 1,
         clickable: false,
-    });
+    }).navigator();
+    $(".icons a").hover(function () {
+        $(".icons small").stop(true, true).html(this.title).fadeIn(200);
+    }, function () {
+        $(".icons small").fadeOut(600);
+    })
+    //lazy loading the script - it's in tab 3 so people won't see it for a while anyway
     $.getScript('http://twitter.com/statuses/user_timeline/kopomir.json?callback=myTwitCb&amp;count=5');
 });
 
+// Most of this code comes from twitter
+//this is called by twitter script when it arrives
 function myTwitCb(twitters) {
     var statusHTML = [];
     for (var i = 0; i < 7 && i < twitters.length; i++) {
@@ -87,7 +71,7 @@ function myTwitCb(twitters) {
     $("div#twitter_div").scrollable({
         size: 1,
         clickable: false,
-    });
+    }).navigator();
 }
 
 function relative_time(time_value) {

@@ -59,7 +59,8 @@ body {
 .langmenu a.active,.langmenu a:hover {
 	height: 19px;
 	background-position: bottom;
-	margin-bottom: 0
+	margin-bottom: -1px;
+	
 }
 
 .langmenu a.cz {
@@ -158,7 +159,8 @@ a:hover {
 .left {
 	position: absolute;
 	right: 11px;
-	top: -9px
+	top: -9px;
+	z-index: 5;
 }
 
 /* @end */
@@ -220,13 +222,14 @@ div.tooltip {
 	background: transparent url(img/black.png) no-repeat scroll 0 0;
 	font-size: 14px;
 	height: 153px;
-	padding: 15px;
+	padding: 19px;
 	width: 175px;
 	font-size: 14px;
 	display: none;
 	color: #fff;
-	margin-top: 35px;
-	margin-left: -20px;
+	margin-top: 95px;
+	margin-left: -160px;
+	/*z-index: -1;*/
 }
 
 /* tooltip title element (h3) */
@@ -436,4 +439,17 @@ div#twitter_div ul#twitter_update_list li span {
 
 #unsopported p {
 	background-color: #3a3a3a;
+}
+
+.icons a img {
+    opacity: 0.5;
+    padding: 0 1px;
+}
+
+.icons a:hover img {
+    opacity: 1;
+}
+.icons div {
+    display:block;
+    text-align:center;
 }
