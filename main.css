@@ -26,7 +26,8 @@ body {
 }
 
 #content {
-	padding: 0 8px
+	padding: 0 8px;
+	max-height: 420px;
 }
 
 /* @end */
