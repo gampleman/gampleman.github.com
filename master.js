@@ -48,7 +48,8 @@ $(function() {
         $(".icons small").stop(true, true).html(this.title).fadeIn(200);
     }, function () {
         $(".icons small").fadeOut(600);
-    })
+    });
+	
     //lazy loading the script - it's in tab 3 so people won't see it for a while anyway
     $.getScript('http://twitter.com/statuses/user_timeline/kopomir.json?callback=myTwitCb&amp;count=5');
 });

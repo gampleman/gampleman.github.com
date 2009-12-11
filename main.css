@@ -280,9 +280,10 @@ div.scrollable div.items {
 div.scrollable div.items div {
 	float: left;
 	text-align: center;
-	width: 297px;
+	width: 293px;
 	margin-right: 20px;
 	-moz-border-radius: 5px;
+	padding-left: 4px;
 }
 
 /* active item */
@@ -455,4 +456,8 @@ div#twitter_div ul#twitter_update_list li span {
 .icons div {
     display:block;
     text-align:center;
+}
+div.scrollable a img {
+	border: 1px solid black;
+	
 }
