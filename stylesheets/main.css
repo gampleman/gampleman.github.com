@@ -8,7 +8,9 @@ body {
 	padding: 0;
 	text-align: center;
 	color: #000;
-	background: url(img/bg.png) repeat-x fixed
+	text-shadow: rgb(0, 0, 0) 0px 1px 1px;
+	text-shadow: rgba(0, 0, 0, 0.695312) 0px 1px 1px;
+	background: url(../img/bg.png) repeat-x fixed
 }
 
 #container {
@@ -19,7 +21,7 @@ body {
 
 #mainContent {
 	padding: 10px 20px;
-	background: url(img/main-bg.png) repeat-y;
+	background: url(../img/main-bg.png) repeat-y;
 	margin: 0;
 	position: relative;
 	color: gray
@@ -35,7 +37,7 @@ body {
 /* @group Langmenu */
 
 .langmenu {
-	background: url(img/langmenu.png) no-repeat 0 bottom;
+	background: url(../img/langmenu.png) no-repeat 0 bottom;
 	width: 94px;
 	height: 35px;
 	position: fixed;
@@ -65,11 +67,11 @@ body {
 }
 
 .langmenu a.cz {
-	background-image: url(img/cza.png)
+	background-image: url(../img/cza.png)
 }
 
 .langmenu a.en {
-	background-image: url(img/gba.png)
+	background-image: url(../img/gba.png)
 }
 
 .langmenu span {
@@ -83,26 +85,31 @@ body {
 .navigation {
 	margin-left: -21px;
 	margin-right: -10px;
-	background: url(img/navigation.png) no-repeat;
+	background: url(../img/navigation.png) no-repeat;
 	padding: 14px 18px 18px;
 	margin-top: 73px
 }
 
 .navigation a {
+	text-decoration: none;
 	margin-right: 30px;
 	margin-left: 28px;
 	display: inline-block;
 	color: white;
 	padding: 4px;
-	text-decoration: none;
+	
 }
 
-.navigation a.active {
-	color: #222;
+.navigation a.active, .navigation a:active {
+	color: rgb(0,0,0);
+	text-shadow: rgb(140, 140, 140) 0px 1px 1px;
+	text-shadow: rgba(140, 140, 140, 0.695312) 0px 1px 1px;
 }
 
 .navigation a:hover {
-	color: grey;
+    color: #777;
+	text-shadow: rgb(0, 0, 0) 0px 1px 1px;
+	text-shadow: rgba(0, 0, 0, 0.695312) 0px 1px 1px;
 }
 
 /* @end */
@@ -126,7 +133,7 @@ a:hover {
 /* @group Header & Footer */
 
 .header {
-	background: url(img/header.png) no-repeat -5px;
+	background: url(../img/header.png) no-repeat -5px;
 	color: #e3e3e3;
 	height: 36px;
 	padding-top: 26px;
@@ -137,6 +144,7 @@ a:hover {
 	font-style: normal;
 	font-weight: normal;
 	text-transform: lowercase;
+	text-shadow: rgba(0, 0, 0, 0.995312) 0px 1px 1px;
 }
 
 .header::before {
@@ -145,7 +153,7 @@ a:hover {
 
 .footer {
 	padding: 20px;
-	background: url(img/footer.png) no-repeat;
+	background: url(../img/footer.png) no-repeat;
 	text-align: center;
 	color: #939393;
 	font: italic
@@ -174,18 +182,18 @@ a:hover {
 }
 
 .frame .top {
-	background: url(img/divtop.png) no-repeat;
+	background: url(../img/divtop.png) no-repeat;
 	height: 16px;
 	margin-bottom: 0
 }
 
 .frame .main {
-	background: url(img/divmain.png) repeat-y;
+	background: url(../img/divmain.png) repeat-y;
 	padding: 0 8px 0 14px
 }
 
 .frame .bottom {
-	background: url(img/divbottom.png) no-repeat;
+	background: url(../img/divbottom.png) no-repeat;
 	height: 16px;
 	margin-top: 0
 }
@@ -215,12 +223,13 @@ a:hover {
 	width: 300px
 }
 
+
 /* New stuf */
 
 /* @group Tooltip */
 
 div.tooltip {
-	background: transparent url(img/black.png) no-repeat scroll 0 0;
+	background: transparent url(../img/black.png) no-repeat scroll 0 0;
 	font-size: 14px;
 	height: 153px;
 	padding: 19px;
@@ -245,6 +254,11 @@ div.tooltip h3 {
 /* @end */
 
 /* @group Scrollable */
+
+div.scrollable a img {
+	border: 1px solid black;
+	
+}
 
 /* 
 	root element for the scrollable. 
@@ -294,7 +308,7 @@ div.scrollable div.items div.active {
 }
 
 div.portnav {
-	background: url(img/divmain.png) repeat-y;
+	background: url(../img/divmain.png) repeat-y;
 }
 
 /* position and dimensions of the navigator */
@@ -317,7 +331,7 @@ div.navi a {
 	height: 8px;
 	float: left;
 	margin: 3px;
-	background: url(img/navigator.png) 0 0 no-repeat;
+	background: url(../img/navigator.png) 0 0 no-repeat;
 	display: block;
 	font-size: 1px;
 	cursor: pointer;
@@ -436,9 +450,8 @@ div#twitter_div ul#twitter_update_list li span {
 
 #unsupported {
 	color: #fff;
-	background-image: url(img/main-bg.png);
+	background-image: url(../img/main-bg.png);
 	padding: 1px 20px 20px;
-	display: none;
 }
 
 #unsopported p {
@@ -456,8 +469,4 @@ div#twitter_div ul#twitter_update_list li span {
 .icons div {
     display:block;
     text-align:center;
-}
-div.scrollable a img {
-	border: 1px solid black;
-	
 }

@@ -1,0 +1,81 @@
+<% lang :en %>
+<% content_for :unsupported do %>
+<p>The browser you are using is obsolete and is not fully supported by this website. You will still be able to browse this site, but not all features will work or look as intended.</p> 
+  <p>Please download a modern browser such as <a href="http://getfirefox.com">Firefox</a>, <a href="http://chrome.google.com">Chrome</a> or <a href="http://apple.com/downloads">Safari</a>.</p>  
+  <p><a href="javascript:$('#unsupported').slideUp().hide()">Close this warning</a></p>
+<% end %>	
+	
+	
+	<a class="left" id="my-photo" title="Download my CV" href="CV.pdf"><img alt="my photo" src="img/photo_2_tn.jpg" /></a>
+	<div class="tooltip">
+		<h3>Interested?</h3> <p><a href="CV.pdf">Download my CV.</a></p>
+	</div>
+	<p class="resume">
+		Web Design, RIA programming, UX design &amp; doing cool stuff
+	</p>
+	<div class="navigation">
+		<a id="nav-info" href="#info" name="nav-info">Info</a> <a id="nav-portfolio" href="#portfolio" name="nav-portfolio">Portfolio</a> <a id="nav-contact" href="#contact" name="nav-contact">Contact</a>
+	</div>
+	<div id="content">
+		
+		<div id="info" class="node">
+			<% frame "About me" do %>
+			    <% description do %>
+			        I am a young developer based in Edinburgh, Scotland originating from Prague. I am interested in creating interesting websites and building <abbr title="Rich Internet Applications">RIAs</abbr>.
+			    <% end %>
+			    <% bottom do %>
+			    	I am also a student of Artificial Intelligence and Psychology at Edinburgh University.
+			    <% end %>
+		    <% end %>
+		    <% frame "Hire me" do %>
+		        <% top do %>
+		            I am looking for a part time job either as in-house or freelance developer/designer. Since I am a student I am looking for approximately ten hours per week.
+		        <% end %>
+			    <% bottom do %>
+			        If you would like a beautiful custom built website, don't hesitate to <a href="#contact">contact me</a>.
+			    <% end %>
+		    <% end %>
+		</div>
+		
+		<div id="portfolio" class="node">
+			<% frame "Websites I've done" do %>
+				<div class="scrollable">
+				    <div class="items"> 
+				        <%= partial 'portfolio_en' %>
+				    </div>
+				</div>
+				<a class="prev"></a>
+				<div class="navi"></div>
+				<a class="next"></a>
+				<br style="clear:both;" />
+			<% end %>
+		</div>
+		<div id="contact" class="node">
+			<% frame "Contact" do %>	
+				<a class="mail fn" href="mailto:hontiom(at)seznam(point)cz">Jakub Hampl</a>
+				<div>
+					<span class="tel">+44 (0) 7961 722 904</span>
+				</div>
+				
+				<div class="icons"><br />
+				    <a href="mailto:hontiom(at)seznam(point)cz" title="Email me"><img src="img/icons/email_32.png" alt="email" /></a>
+				    <a href="http://gampleman.eu" title="My tumblelog"><img src="img/icons/tumblr_32.png" alt="tumblr" /></a>
+				    <a href="http://facebook.com/kopomir" title="Facebook profile"><img src="img/icons/facebook_32.png" alt="facebook" /></a>
+				    <a href="http://www.flickr.com/photos/kopomir/" title="flickr photostream"><img src="img/icons/flickr_32.png" alt="flickr" /></a>
+				    <a href="http://www.linkedin.com/in/hampljakub" title="LinkedIn profile"><img src="img/icons/linkedin_32.png" alt="linkedin" /></a>
+				    <a href="skype:kopomir?chat" title="Contact me through Skype"><img src="img/icons/skype_32.png" alt="skype" /></a>
+				    <a href="http://twitter.com/kopomir" title="Twitter feed"><img src="img/icons/twitter_32.png" alt="twitter" /></a>
+				    <a href="http://vimeo.com/user1050524/videos" title="Vimeo videos"><img src="img/icons/vimeo_32.png" alt="vimeo" /></a>
+				    <div>&nbsp;<small></small>&nbsp;</div>
+				</div>	
+			<% end %>
+			
+			<% frame "Status" do %>
+				<div id="twitter_div">
+					<ul id="twitter_update_list" class="items">
+						<li><span>To see more tweets, view my full <a href="http://twitter.com/kopomir" id="twitter-link">Twitter profile</a>.</span></li>
+					</ul>
+				</div>
+				<div style="display: block; margin-left: 109px;" class="navi"></div>
+		    <% end %>
+		</div>

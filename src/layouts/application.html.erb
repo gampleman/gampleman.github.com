@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link href="http://github.com/feeds/gampleman/commits/gampleman.github.com/master" rel="alternate" title="Recent Commits to gampleman.github.com:master" type="application/atom+xml" />
+		<meta name="description" content="<%=yield(:description)%>" />
+		<title>
+			Jakub Hampl
+		</title>
+		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+		<%= javascript_include_tag 'jquery.tools.min.js', 'master'  %>
+		<%= stylesheet_link_tag 'main' %>
+	</head>
+	<body>
+		<div class="langmenu">
+		    <%=lang_link "Czech", :cz %> <%=lang_link "English", :en %>
+		</div>
+		
+		<div id="container">
+		     <!--[if lte IE 7]>
+		    <div id="unsupported">
+		        <%=yield(:unsupported)%>
+    		</div>
+    		<![endif]-->
+			<h1 class="header">
+				Jakub Hampl
+			</h1>
+			<div id="mainContent">
+			    <%= yield %>
+			
+				</div>
+			</div>
+			<div class="footer">
+				© Jakub Hampl 2009, <a href="http://github.com/gampleman/gampleman.github.com/tree/master">source available</a>
+			</div>
+		</div>
+	
+	</body>
+</html>

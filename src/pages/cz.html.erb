@@ -1,0 +1,90 @@
+<% lang :cz %>
+<% content_for :unsupported do %>
+    		  <p>Prohlížeč, který používáte je zastaralý a není plně podporovaný touto webovou stránkou. Stránky si můžete stále prohlížet, ale nemusí fungovat či vypadat tak, jak byly zamýšleny.</p> 
+    		  <p>Prosím stáhněte si moderní prohlížeč jako <a href="http://getfirefox.com">Firefox</a>, <a href="http://chrome.google.com">Chrome</a> nebo <a href="http://apple.com/downloads">Safari</a>.</p>  
+    		  <p><a href="javascript:$('#unsupported').slideUp().hide()">Zavřít toto varování</a></p>
+<% end %>
+
+
+				<a class="left" id="my-photo" href="CV.pdf"><img src="img/photo_2_tn.jpg" /></a>
+				<div class="tooltip">
+					<h3><a href="CV.pdf">Stáhnětete si moje CV </a></h3>
+				</div>
+				<p class="resume">
+					Kompletní vytvoření nového webu, Webový Design, programování RIA, UX design &amp; webové trendy
+				</p>
+				<div class="navigation">
+					<a id="nav-info" href="#info" name="nav-info">Info</a> <a id="nav-portfolio" href="#portfolio" name="nav-portfolio">Portfolio</a> <a id="nav-contact" href="#contact" name="nav-contact">Kontakt</a>
+				</div>
+				<div id="content">
+					<div id="info" class="node">
+					<% frame "O&nbsp;mně" do %>
+                        <% description do %>
+							V současné době studuju obor Umělá inteligence a psychologie na Edinburghské univerzitě ve Skotsku.
+                        <% end %>
+						<% bottom do %>
+							Zabývám se vytvářením interaktivních webových aplikací.
+						<% end %>
+					<% end %>
+					<% frame "Najměte si mě" do %>
+                        <% top do %>
+							Nabízím Vám kompletní vytvoření moderních a funkčních stránek, či výrobu interaktivních webových aplikací. Pokud máte zájem, neváhejte mě kontaktovat.
+						<% end %>
+						<% bottom do %>
+							Nahlédnutím do portfolia uvidíte ukázky z některých mých prací.
+						<% end %>
+					<% end %>
+					</div>
+					<div id="portfolio" class="node">
+						
+						<% frame "Stránky, které jsem dělal" do %>
+							<!-- root element for scrollable --> 
+							<div class="scrollable"> 
+							    <!-- root element for the items --> 
+							    <div class="items">
+							         <%= partial 'portfolio_cz' %>
+									</div>
+                				</div>
+                				<a class="prev"></a>
+                				<div class="navi"></div>
+                				<a class="next"></a>
+                				<br style="clear:both;" />
+                			<% end %>
+						
+					</div>
+				
+					<div id="contact" class="node">
+						<% frame "Kontakt" do %>
+								
+									<a class="mail fn" href="mailto:hontiom(at)seznam(point)cz">Jakub Hampl</a>
+									<div>
+										<span class="tel">+44 (0) 7961 722 904</span>
+									</div>
+									
+									<div class="icons"><br />
+									    <a href="mailto:hontiom(at)seznam(point)cz" title="Napište mi email"><img src="img/icons/email_32.png" alt="email" /></a>
+									    <a href="http://gampleman.eu" title="Můj tumblelog"><img src="img/icons/tumblr_32.png" alt="tumblr" /></a>
+									    <a href="http://facebook.com/kopomir" title="Facebook profil"><img src="img/icons/facebook_32.png" alt="facebook" /></a>
+									    <a href="http://www.flickr.com/photos/kopomir/" title="flickr photostream"><img src="img/icons/flickr_32.png" alt="flickr" /></a>
+									    <a href="http://www.linkedin.com/in/hampljakub" title="LinkedIn profil"><img src="img/icons/linkedin_32.png" alt="linkedin" /></a>
+									    <a href="skype:kopomir?chat" title="Kontaktujte mě přes Skype"><img src="img/icons/skype_32.png" alt="skype" /></a>
+									    <a href="http://twitter.com/kopomir" title="Twitter"><img src="img/icons/twitter_32.png" alt="twitter" /></a>
+									    <a href="http://vimeo.com/user1050524/videos" title="Vimeo videa"><img src="img/icons/vimeo_32.png" alt="vimeo" /></a>
+									    <div>&nbsp;<small></small>&nbsp;</div>
+									</div>
+									
+						<% end %>
+						<% frame "Status" do %>
+    								<div id="twitter_div">
+
+    								<ul id="twitter_update_list" class="items">
+
+    									<li><span>To see more tweets, view my full <a href="http://twitter.com/kopomir" id="twitter-link">Twitter profile</a>.</span></li>
+    								</ul>
+
+    								</div>
+
+    								<div style="display: block; margin-left: 109px;" class="navi"></div>
+    				<% end %>
+					</div>
+				
